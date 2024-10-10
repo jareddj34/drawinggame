@@ -1,0 +1,29 @@
+/* styles.css */
+body {
+    text-align: center;
+    font-family: Arial, sans-serif;
+    background-color: black;
+    color: white;
+}
+
+canvas {
+    border: 1px solid #000;
+    margin-top: 20px;
+    cursor: crosshair;
+}
+
+h1 {
+    margin-top: 50px;
+}
+
+button {
+    margin-top: 20px;
+    padding: 10px 20px;
+    font-size: 16px;
+}
+
+#result {
+    font-size: 20px;
+    font-weight: bold;
+    margin-top: 20px;
+}
