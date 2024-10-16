@@ -71,6 +71,8 @@ function startGame() {
 function draw(e) {
     if (!isDrawing || goButton.style.display !== "none") return;
 
+    result.style.color = "white";
+
     //function stuff
     const x = e.offsetX;
     const y = e.offsetY;
@@ -146,8 +148,11 @@ function draw(e) {
     ctx.stroke();
     [lastX, lastY] = [e.offsetX, e.offsetY];
 
+    highScoreText.innerText = "";
+
     if (tooClose) {
-        result.innerText = `Too close to the dot!`;
+        //result.innerText = `Too close to the dot!`;
+        result.innerText = "";
         ctx.fillText(
             "Too close to the dot!",
             canvas.width / 2 - 210,
@@ -158,7 +163,10 @@ function draw(e) {
     }
 
     if (isBad) {
-        result.innerText = `You are NOT drawing a circle well!`;
+        // result.innerText = `You are NOT drawing a circle well!`;
+        result.innerText = `XX.X%`;
+        result.style.color = "red";
+        highScoreText.innerText = `Wrong Way`;
     } else {
         // Clear the area where the text will be drawn
         // ctx.clearRect(canvas.width / 2 - 150, canvas.height / 2, 500, 500);
