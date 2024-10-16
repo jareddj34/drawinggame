@@ -8,14 +8,34 @@
     </head>
     <body>
         <h1>Draw a Perfect Circle</h1>
-        <canvas
-            id="circleCanvas"
-            width="1000"
-            height="600"
-            style="border: 1px solid white"
-        ></canvas>
-        <p id="result">Draw a circle around the dot</p>
-        <button id="resetButton">Reset</button>
+        <canvas id="circleCanvas" width="1000" height="600"></canvas>
+        <button
+            id="goButton"
+            style="
+                border-radius: 100%;
+                transform: translateY(-300px) translateX(-500px);
+                width: 100px;
+                height: 100px;
+            "
+        >
+            <span style="font-size: 40px">Go</span>
+        </button>
+        <h1
+            id="result"
+            style="
+                transform: translateY(-378px) translateX(7px);
+                pointer-events: none;
+                font-size: 48px;
+            "
+        ></h1>
+        <h1
+            id="highScore"
+            style="
+                transform: translateY(-400px) translateX(8px);
+                pointer-events: none;
+                font-size: 24px;
+            "
+        ></h1>
         <script src="test.js"></script>
     </body>
 </html>
